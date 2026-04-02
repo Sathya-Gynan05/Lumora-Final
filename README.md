@@ -1,6 +1,6 @@
 # Lumora
 
-![Lumora Header](./worldmonitor-header.png)
+![Lumora Award](./cmrit.jpeg)
 
 **Won 1st place in a national level hackathon organized by CMRIT.**
 
