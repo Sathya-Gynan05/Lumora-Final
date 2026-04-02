@@ -1,66 +1,114 @@
-# The Eye: TechTitans Military Intelligence Dash
+# Lumora
 
-**The Eye** is a high-fidelity, military-focused evolution of the WorldMonitor platform. It is engineered for rapid situational awareness, strategic analysis, and real-time geopolitical monitoring.
+![Lumora Header](./worldmonitor-header.png)
 
----
+**Won 1st place in a national level hackathon organized by CMRIT.**
 
-## 👁️ Core Mission
-To provide a unified, distraction-free intelligence picture for defense analysts, utilizing AI-powered synthesis and curated tactical data layers.
+Lumora is a real-time geopolitical intelligence dashboard built for fast situational awareness, evidence-first analysis, and live monitoring across global security, infrastructure, markets, aviation, and conflict signals.
 
-## 🛰️ Tactical Map Layers
-The dashboard is strictly filtered to only show high-impact strategic layers:
-- **Iran Attacks & Conflict Zones**: Real-time kinetic activity tracking.
-- **Intel Hotspots**: Georegistered OSINT findings.
-- **Military Bases & Nuclear Sites**: Global strategic infrastructure.
-- **Military Activity**: Real-time flight (ADS-B) and naval (AIS) monitoring.
-- **Strategic Waters & Trade Routes**: Chokepoint and maritime flow analysis.
-- **GPS Jamming**: Global GNSS interference mapping.
-- **Day/Night Overlay**: Real-time solar terminator tracking.
+## Overview
 
-## 📰 Intelligence Feed
-The "Live News" subsystem is optimized for high-authority, low-noise reporting from:
-- **Sky News** (Global Breaking)
-- **Euronews** (European/Geopolitical)
-- **CNBC** (Macro-Economic & Industrial)
+Lumora brings together live news, strategic map layers, country instability signals, military activity, infrastructure disruptions, market movement, and AI-assisted reasoning into one unified interface. It is designed to help users move quickly from raw information to actionable understanding.
 
-## 🤖 AI-Powered Analysis
-- **Unified News Engine**: Proprietary subsystem fetching data from 100+ sources including Reuters, AP, Janes, and Defense One.
-- **Intelligence Findings**: Automated headline analysis and threat ranking.
-- **What-If Geopolitical Simulator**: Run strategic scenarios (e.g., "Middle East Escalation") to receive AI-generated impact briefs via **Groq**.
-- **Ask the Dashboard**: Natural language query interface for the entire dataset.
+## Key Features
 
----
+- Real-time global news aggregation and clustering
+- AI Insights for high-level brief generation
+- Investigation Agent for question-driven evidence-backed analysis
+- Watchtower Agent for convergence monitoring and escalation scanning
+- Live Intelligence feed for topic-based intelligence tracking
+- Military flights and vessel monitoring
+- Internet outage, GPS jamming, wildfire, maritime, and disruption tracking
+- Country instability and focal-point detection
+- Live webcam and live channel monitoring
+- Multi-panel intelligence workspace with map-first navigation
 
-## 🛠️ Technical Stack
-- **Frontend**: TypeScript, Vite, Vanilla CSS.
-- **Mapping Engine**: Deck.gl & MapLibre for high-performance WebGL rendering.
-- **Intelligence Architecture**: Custom RSS intake, Groq LLM integration.
+## AI Layer
 
-## 🚀 Getting Started
+Lumora uses additive AI features on top of its existing intelligence pipeline.
 
-### 1. Requirements
-- Node.js (v18+)
-- A **Groq API Key** (Set in `.env`)
+- `AI Insights` summarizes the most important current developments
+- `Investigation Agent` gathers evidence from the loaded Lumora context and generates a structured answer
+- `Watchtower Agent` scans for signal convergence and surfaces emerging watch items or active alerts
+- `Deduction` and country-intelligence routes support evidence-backed geopolitical analysis
 
-### 2. Installation
-```powershell
-# Clone the repository
-git clone https://github.com/vignesh-poovanna/The-Eye-TechTitans.git
-cd worldmonitor
+The project supports cloud and local model/provider setups, including Groq-backed reasoning flows where configured.
 
-# Install dependencies
-npm install
+## Tech Stack
 
-# Configure environment
-# Add your GROQ_API_KEY to the .env file
+- Frontend: TypeScript, Vite, Preact-style architecture
+- Visualization: Deck.gl, MapLibre, Globe.gl
+- Backend routes: local Vite middleware + server handlers
+- AI/ML: Groq, browser ML workers, local/runtime-configurable providers
+- Desktop support: Tauri
+
+## Project Structure
+
+```text
+src/        Frontend app, components, services, agents, map layers
+server/     Handler implementations for intelligence and data routes
+api/        API route entry points
+tests/      Service, route, and integration tests
+src-tauri/  Desktop runtime packaging and sidecar support
 ```
 
-### 3. Usage
-```powershell
+## Running Locally
+
+### 1. Open the project
+
+```bash
+cd /Users/sai-12/Desktop/Lumora
+```
+
+### 2. Install dependencies
+
+```bash
+npm install --legacy-peer-deps
+```
+
+### 3. Add environment variables
+
+Create a local env file:
+
+```bash
+touch .env.local
+```
+
+Add your Groq key:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### 4. Start the app
+
+```bash
 npm run dev
 ```
 
----
+Open:
 
-## 📄 License
-This project is for use by the TechTitans team for the AI Arena competition. All rights reserved.
+[http://127.0.0.1:3000/](http://127.0.0.1:3000/)
+
+## Useful Commands
+
+```bash
+npm run dev
+npm run typecheck
+npm run build
+npm run dev:tech
+npm run dev:finance
+npm run dev:happy
+```
+
+## Notes
+
+- `.env.local` is ignored by Git, so local API keys stay private
+- Some live data sources require additional provider keys or relays
+- If local dev shows stale content, hard refresh the browser with `Cmd + Shift + R`
+
+## Repository
+
+GitHub:
+
+[https://github.com/Sathya-Gynan05/Lumora-Final](https://github.com/Sathya-Gynan05/Lumora-Final)
