@@ -2,7 +2,7 @@
 
 ![Lumora Award](./cmrit.jpeg)
 
-**Won 1st place in a national level hackathon organized by CMRIT.**
+<p align="center"><strong>Won 1st place in a national level hackathon organized by CMRIT.</strong></p>
 
 Lumora is a real-time geopolitical intelligence dashboard built for fast situational awareness, evidence-first analysis, and live monitoring across global security, infrastructure, markets, aviation, and conflict signals.
 
